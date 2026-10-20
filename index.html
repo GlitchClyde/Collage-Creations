@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collage Creations</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section class="stage">
+    <canvas id="cv"></canvas>
+    <p id="status" role="status"></p>
+  </section>
+  <aside class="panel">
+    <h1>Collage Creations</h1>
+    <div class="grp">
+      <h2>Media <span id="cnt">0/9</span></h2>
+      <label class="btn primary">Add photos or videos<input id="file" type="file" accept="image/*,video/*" multiple hidden></label>
+      <ul id="list"></ul>
+    </div>
+    <div class="grp"><h2>Canvas size</h2><div id="aspects" class="seg"></div></div>
+    <div class="grp"><h2>Layout</h2><div id="layouts" class="thumbs"></div></div>
+    <div class="grp">
+      <h2>Frame</h2>
+      <label class="rng">Gap <input type="range" id="gap" min="0" max="60" value="16"><output></output></label>
+      <label class="rng">Padding <input type="range" id="pad" min="0" max="120" value="32"><output></output></label>
+      <label class="rng">Corner radius <input type="range" id="rad" min="0" max="80" value="20"><output></output></label>
+      <label class="rng">Border width <input type="range" id="bw" min="0" max="20" value="0"><output></output></label>
+      <label class="clr">Border color <input type="color" id="bc" value="#ffffff"></label>
+    </div>
+    <div class="grp">
+      <h2>Background</h2>
+      <label class="clr">Color <input type="color" id="bg" value="#14213d"></label>
+      <div id="swatches" class="sw"></div>
+    </div>
+    <div class="grp actions">
+      <button id="btnImg" class="primary">Download image</button>
+      <button id="btnVid" hidden>Export video</button>
+    </div>
+  </aside>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
