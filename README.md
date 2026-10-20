@@ -22,3 +22,9 @@ Or enable GitHub Pages on the repo (Settings > Pages).
 ## Customize
 - Add or change layouts: `getRects()` in `app.js` (each cell is `[x, y, width, height]` from 0 to 1)
 - Canvas sizes: the `ASPECTS` list at the top of `app.js`
+
+## New in v2
+- **Edit each photo, Canva style:** click a photo in the preview, then drag to move it, scroll to zoom, or use the sliders (zoom, left/right, up/down, rotate) and Flip/Reset
+- **Pattern backgrounds:** leopard, giraffe, panda, dalmatian, zebra and tiger prints (generated in `patterns.js`), alongside solid colors
+- Cells glide smoothly when you change layout, canvas size, gap or padding (respects reduced-motion settings)
+- Font: Inter (loaded from Google Fonts; falls back to the system font offline)
