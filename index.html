@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Collage Creations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,6 +20,15 @@
       <label class="btn primary">Add photos or videos<input id="file" type="file" accept="image/*,video/*" multiple hidden></label>
       <ul id="list"></ul>
     </div>
+    <fieldset id="editor" class="grp" disabled>
+      <h2>Edit photo <span id="selname">none selected</span></h2>
+      <label class="rng">Zoom <input type="range" id="ez" min="50" max="400" value="100"><output></output></label>
+      <label class="rng">Left / right <input type="range" id="ex" min="-100" max="100" value="0"><output></output></label>
+      <label class="rng">Up / down <input type="range" id="ey" min="-100" max="100" value="0"><output></output></label>
+      <label class="rng">Rotate <input type="range" id="er" min="-180" max="180" value="0"><output></output></label>
+      <div class="row2"><button id="eflip">Flip</button><button id="ereset">Reset</button></div>
+      <p class="hint">Click a photo in the preview, then drag to move it or scroll to zoom.</p>
+    </fieldset>
     <div class="grp"><h2>Canvas size</h2><div id="aspects" class="seg"></div></div>
     <div class="grp"><h2>Layout</h2><div id="layouts" class="thumbs"></div></div>
     <div class="grp">
@@ -31,8 +41,11 @@
     </div>
     <div class="grp">
       <h2>Background</h2>
-      <label class="clr">Color <input type="color" id="bg" value="#14213d"></label>
-      <div id="swatches" class="sw"></div>
+      <div id="pats" class="thumbs"></div>
+      <div id="solidopts" class="grp">
+        <label class="clr">Color <input type="color" id="bg" value="#14213d"></label>
+        <div id="swatches" class="sw"></div>
+      </div>
     </div>
     <div class="grp actions">
       <button id="btnImg" class="primary">Download image</button>
@@ -40,6 +53,7 @@
     </div>
   </aside>
 </main>
+<script src="patterns.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
